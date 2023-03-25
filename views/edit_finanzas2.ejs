@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-  <title>CRUD</title>
+  <title>FINANZAS-RVB</title>
 </head>
 
 <body>
@@ -33,36 +33,37 @@
       </div>
     </div>
   </nav>
-
-  <% if (recursos_ordinarios) { %>
+  <% if (rubro) { %>
     <div class="container mt-4">
 
       <div class="card border-secondary">
         <div class="card-header">Editar Registro</div>
         <div class="card-body">
-          <form action="/update" method="POST">
-            <input id="id" name="id" value="<%= recursos_ordinarios.id  %>" hidden>
+          <form action="/update2" method="POST">
+            <input id="id" name="id" value="<%= rubro.id  %>" hidden>
             <div class="mb-3">
-              <label for="recursos_ordinarios" class="form-label">RECURSOS ORDINARIOS</label>
-              <input type="text" class="form-control" id="recursos_ordinarios" name="recursos_ordinarios"
-                value="<%= recursos_ordinarios.recursos_ordinarios  %>" tabindex="1">
+              <label for="rubro" class="form-label">RUBRO</label>
+              <input type="text" class="form-control" id="rubro" name="rubro" value="<%= rubro.rubro  %>" tabindex="1">
             </div>
             <div class="mb-3">
-              <label for="recursos_ordinarios" class="form-label">CERTIFICADO</label>
+              <label for="rubro" class="form-label">TECHO</label>
+              <input type="text" class="form-control" id="techo" name="techo" value="<%= rubro.techo  %>" tabindex="1">
+            </div>
+            <div class="mb-3">
+              <label for="rubro" class="form-label">CERTIFICADO</label>
               <input type="text" class="form-control" id="certificado" name="certificado"
-                value="<%= recursos_ordinarios.certificado  %>" tabindex="1">
+                value="<%= rubro.certificado  %>" tabindex="1">
             </div>
             <div class="mb-3">
-              <label for="recursos_ordinarios" class="form-label">COMPROMISO</label>
-              <input type="text" class="form-control" id="compromiso" name="compromiso"
-                value="<%= recursos_ordinarios.compromiso  %>" tabindex="1">
+              <label for="rubro" class="form-label">COMPROMISO</label>
+              <input type="text" class="form-control" id="compromiso" name="compromiso" value="<%= rubro.compromiso  %>"
+                tabindex="1">
             </div>
             <div class="mb-3">
-              <label for="recursos_ordinarios" class="form-label">DEVENGADO</label>
-              <input type="text" class="form-control" id="devengado" name="devengado"
-                value="<%= recursos_ordinarios.devengado %>" tabindex="1">
+              <label for="rubro" class="form-label">DEVENGADO</label>
+              <input type="text" class="form-control" id="devengado" name="devengado" value="<%= rubro.devengado %>"
+                tabindex="1">
             </div>
-
 
 
 
@@ -72,8 +73,6 @@
         </div>
       </div>
     </div>
-
-
     <% } %>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
